@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace View;
+namespace Projeto01.src.view;
 
 public static class Terminal
 {
@@ -35,4 +35,17 @@ public static class Terminal
     {
         Console.WriteLine("Teste");
     }
+    
+    //Cadastrar livro.
+
+    public static void cadastrarLivro
+
+    //Cadastrar usuário.
+    //Realizar empréstimo de livro.
+    //Realizar devolução.
+    //Listar livros disponíveis.
+    //Listar empréstimos ativos.
+    //Exibir histórico de empréstimos por usuário.
+    //Modelo de Domínio (Classes Principais)
+    
 }
