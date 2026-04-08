@@ -1,29 +1,25 @@
 namespace Projeto01.src.service;
 
-using Projeto01.src.model;
 using Projeto01.src.model.dto;
 
 public class BibliotecaService
 {
-    //CadastrarLivro
+    private LivroService livroService = new LivroService();
+
     public bool CadastrarLivro(LivroDTO livroDTO)
     {
-        Livro livro = new Livro(livroDTO.id, livroDTO.titulo, livroDTO.anoPublicacao, livroDTO.isbn, livroDTO.status);
-        
-        if (Livro.listaLivros.Any(liv => liv.GetIsbn() == livro.GetIsbn()))
-        {
-            Console.WriteLine("ISBN já cadastrado");
-            return false;
-        }
-
-        Livro.listaLivros.Add(livro);
-        return true;
+        return livroService.CadastrarLivro(livroDTO);
     }
 
     //CadastrarUsuario
     //EmprestarLivro
     //DevolverLivro
-    //ListarDisponiveis
+
+    public List<LivroDTO> ListarDisponiveis()
+    {
+        return livroService.ListarDisponiveis();
+    }
+
     //ListarEmprestimosAtivos
     //HistoricoUsuario
 }

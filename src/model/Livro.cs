@@ -1,7 +1,6 @@
 namespace Projeto01.src.model;
 
 using Projeto01.src.model.enums;
-using Projeto01.src.model.dto;
 
 public class Livro
 {
@@ -11,7 +10,7 @@ public class Livro
     private string? isbn;
     private StatusLivro? status;
 
-    public static List<Livro> listaLivros;
+    public static List<Livro> listaLivros = new List<Livro>();
 
     public Livro(int? id, string? titulo, int? anoPublicacao, string? isbn, StatusLivro? status)
     {
